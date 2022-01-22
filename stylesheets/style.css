@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --transparent-white: hsla(0, 0%, 100%, 0.75); /* (paragraphs) */
+    --very-light-gray: hsl(0, 0%, 95%); /*(background, headings, buttons) */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem
+}
+.card-gallery {
+    display: flex;
+    flex-flow: column;
+}
+.card:nth-child(1){
+    border-radius: 15px 15px 0 0;    
+}
+.card:nth-child(2){
+    background-color: var(--dark-cyan);    
+}
+
+.card:nth-child(3){
+    border-radius: 0 0 15px 15px;
+    background-color: var(--very-dark-cyan); 
+}
+.card:nth-child(2) .btn {
+    color: var(--dark-cyan)
+}
+.card:nth-child(2) .btn:hover {
+    background-color: var(--dark-cyan);
+    color: white;
+}
+.card:nth-child(3) .btn {
+    color: var(--very-dark-cyan);
+    
+}
+.card:nth-child(3) .btn:hover {
+    background-color: var(--very-dark-cyan);
+    color: white;
+}
+.card img{
+    padding-bottom: 1rem;
+}
+.card {
+    width: 250px;
+    height: auto;
+    background-color: var(--bright-orange);
+    padding: 50px;
+}
+.card-text h2 {
+    color: var(--very-light-gray);
+    font-family: 'Big Shoulders Display';
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+.card-text p {
+    color: var(--transparent-white);
+    font-family: 'Lexend Deca';
+    padding-bottom: 2rem;
+    line-height: 2rem;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: white;
+    border-radius: 30px;
+    border: 2px solid white;
+    color: var(--bright-orange);
+    font-size: 1.25rem;
+    padding: 10px 25px;
+    transition: 0.3s ease-in;
+    font-family: 'Lexend Deca'
+}
+.btn:hover {
+    background-color: var(--bright-orange);
+    color: white;
+}
+
+@media (min-width: 1200px){
+    .card-gallery{
+        flex-flow: row;
+    }
+    .card:nth-child(1){
+        border-radius: 15px 0 0 15px;
+    }
+    .card:nth-child(3){
+        border-radius: 0 15px 15px 0;
+    }
+}
